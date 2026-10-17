@@ -5,11 +5,22 @@
     <title>MatCraft</title>
     <style>
         [page] { display: none; }
+        @font-face {
+  font-family: 'mc';
+  src: url('Minecraft-Regular.woff2') format('woff2'); 
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'mc', monospace;
+}
+
     </style>
 </head>
 <body>
 
-    <h1 page="test">Test</h1>
+    <h1 page="test" class=mc>Test</h1>
     <script>
         const page = new URLSearchParams(window.location.search).get('page');
         document.querySelectorAll('[page]').forEach(el => {
