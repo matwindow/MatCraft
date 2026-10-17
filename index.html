@@ -15,6 +15,14 @@
         document.querySelectorAll('[page]').forEach(el => {
             el.style.display = (!page || el.getAttribute('page') === page) ? 'block' : 'none';
         });
+        const urlParams = new URLSearchParams(window.location.search);
+
+if (!urlParams.has('page')) {
+    const newUrl = new URL(window.location.href);
+    newUrl.searchParams.set('page', 'home');
+    window.history.replaceState({}, '', newUrl);
+}
+
     </script>
 
 </body>
