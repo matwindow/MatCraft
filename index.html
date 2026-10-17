@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Strona</title>
+    <style>
+        [page] { display: none; }
+    </style>
+</head>
+<body>
+
+    <h1 page="test">Test</h1>
+    <script>
+        const page = new URLSearchParams(window.location.search).get('page');
+        document.querySelectorAll('[page]').forEach(el => {
+            el.style.display = (!page || el.getAttribute('page') === page) ? 'block' : 'none';
+        });
+    </script>
+
+</body>
+</html>
