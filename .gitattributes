@@ -1,1 +1,10 @@
-*.woff2 text
+*.woff2 binary
+*.png binary
+*.jxl binary
+*.binary binary
+*.jpeg binary
+*.jpg binary
+
+*.txt text
+*.text text
+*.svg text
